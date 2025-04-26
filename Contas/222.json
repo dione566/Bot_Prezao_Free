@@ -6,7 +6,7 @@ from uuid import uuid4
 
 class APIClient:
     def __init__(self, base_url: str = None):
-        self.user_agent = "Mozilla/5.0 (Linux; Android 14; SM-A04M) AppleWebKit/537.36"
+        self.user_agent = "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
         self.base_url = base_url or self._get_api_url()
         self.session = requests.Session()
         self.session.headers.update({
@@ -182,7 +182,7 @@ class APIClient:
             headers={
                 'X-AUTHORIZATION': authorization,
                 'X-ARTEMIS-CHANNEL-UUID': 'cfree-b22d-4079-bca5-96359b6b1f57',
-                'x-access-token': '4e82abb4-2718-4d65-bcd4-c4e147c3404f'
+                'x-access-token': '44e82abb4-2718-4d65-bcd4-c4e147c3404f'
             },
             data={
                 'userId': user_id,
