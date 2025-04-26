@@ -1,1 +1,23 @@
-{"5946743105","auth":"s341beeb6-3539-4fed-8958-e3f8c4e6e495","user_id":"357f7e38b8dde","expiry":"2028-09-12 16:09:02","added_by":"ssh"},{"5967303105":{"telegram_id":"5948303rt105","auth":"s575b5e19-cc48-4a5c-98dd-7ae9bbe03f51","user_id":"70afcda66203d","expiry":"2028-09-12 16:09:02","added_by":"ssh"},{"59483rty03105":{"telegram_id":"594834605","auth":"sbbe0269a-0086-4ebc-92c1-b71773689ec0","user_id":"17d43d0a266","expiry":"2028-09-12 16:09:02","added_by":"ssh"},{"5948303105":{"telegram_id":"5948303105","auth":"s442fa30f-54f3-4158-9f8e-c212e82d44ca","user_id":"180ceefba28","expiry":"2028-09-12 16:09:02","added_by":"ssh"}}
+[
+  "6078369996": {
+    "telegram_id": "6078369996",
+    "auth": "sbbe0269a-0086-4ebc-92c1-b71773689ec0",
+    "user_id": "17d43d0a266",
+    "expiry": "2025-05-21 14:58:57",
+    "added_by": "ssh"
+  },
+  "6858757344": {
+    "telegram_id": "6858757344",
+    "auth": "s341beeb6-3539-4fed-8958-e3f8c4e6e495",
+    "user_id": "357f7e38b8dde",
+    "expiry": "2025-05-21 14:59:47",
+    "added_by": "ssh"
+  },
+  "5948303105": {
+    "telegram_id": "5948303105",
+    "auth": "s442fa30f-54f3-4158-9f8e-c212e82d44ca",
+    "user_id": "180ceefba28",
+    "expiry": "2025-05-21 14:57:50",
+    "added_by": "ssh"
+  }
+}
