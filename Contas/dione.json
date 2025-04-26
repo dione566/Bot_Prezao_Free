@@ -1,1 +1,9 @@
-{"5948303105":{"telegram_id":"5948303105","auth":"s442fa30f-54f3-4158-9f8e-c212e82d44ca","user_id":"180ceefba28","expiry":"2028-09-12 16:09:02","added_by":"ssh"}}
+{
+  "5948303105": {
+    "telegram_id": "5948303105",
+    "auth": "s442fa30f-54f3-4158-9f8e-c212e82d44ca",
+    "user_id": "180ceefba28",
+    "expiry": "2025-05-21 14:57:50",
+    "added_by": "ssh"
+  }
+}
