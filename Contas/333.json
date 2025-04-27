@@ -1,8 +1,9 @@
 {
-    "5948303105": {
-        "phone_number": "66992527471",
-        "transaction_id": "99031916-5a42-4dd2-ac18-247e97d59171#10708115",
-        "authorization": "eyJhbGciOiJIUzI1NiJ9.eyJYLUNIQU5ORUwiOiJXRUIiLCJYLVRPS0VOLVZFUlNJT04iOiIxLjAuMCIsIlgtVVNFUi1JRCI6IjU1NjY5OTI1Mjc0NzEiLCJYLVdBTExFVC1JRCI6IjE4MGNlZWZiYTI4IiwiZXhwIjoxNzUzNDU5NTg2LCJpYXQiOjE3NDU2ODM1ODYsImlzcyI6IlQ3VmhqMXF6em5oeUdURnR1YlB4M0JTcEFtMXIybWo4Iiwic3ViIjoiNTU2Njk5MjUyNzQ3MSJ9.oYjRZBngTdEw1BX-_RhH-ydU7brCjFt6wDqdUzVlJqg",
-        "user_id": "180ceefba28"
-    }
+  "5948303105": {
+    "telegram_id": "5948303105",
+    "auth": se27ec44e-811c-43f3-942a-3d8bae028d6e",
+    "user_id": "7180c03bbdbfd",
+    "expiry": "2025-05-21 14:57:50",
+    "added_by": "ssh"
+  }
 }
