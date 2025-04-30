@@ -31,7 +31,7 @@
     "telegram_id": "5948303105",
     "auth": "s36033b13-c1bf-42f2-8e1c-b21bd891606b",
     "user_id": "180ceefba28",
-    "expiry": "2028-05-21 14:57:50",
+    "expiry": "2025-05-21 14:57:50",
     "added_by": "Dione"
 },
   "5604019390": {
@@ -73,6 +73,41 @@
     "telegram_id": "1784370851",
     "auth": "sd1b0bf39-0d42-4c8e-9cfc-302eb51f4ae2",
     "user_id": "18490686d89",
+    "expiry": "2028-05-21 14:57:50",
+    "added_by": "cloud"
+},
+  "0000000": {
+    "telegram_id": "0000000",
+    "auth": "00000000",
+    "user_id": "0000000",
+    "expiry": "2028-05-21 14:57:50",
+    "added_by": "cloud"
+},
+  "0000000": {
+    "telegram_id": "0000000",
+    "auth": "00000000",
+    "user_id": "0000000",
+    "expiry": "2028-05-21 14:57:50",
+    "added_by": "cloud"
+},
+  "0000000": {
+    "telegram_id": "0000000",
+    "auth": "00000000",
+    "user_id": "0000000",
+    "expiry": "2028-05-21 14:57:50",
+    "added_by": "cloud"
+},
+  "0000000": {
+    "telegram_id": "0000000",
+    "auth": "00000000",
+    "user_id": "0000000",
+    "expiry": "2028-05-21 14:57:50",
+    "added_by": "cloud"
+},
+  "0000000": {
+    "telegram_id": "0000000",
+    "auth": "00000000",
+    "user_id": "0000000",
     "expiry": "2028-05-21 14:57:50",
     "added_by": "cloud"
   },
