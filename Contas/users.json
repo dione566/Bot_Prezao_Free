@@ -76,11 +76,11 @@
     "expiry": "2028-05-21 14:57:50",
     "added_by": "cloud"
   },
-  "4444444": {
-    "telegram_id": "4444444",
-    "auth": "4444444",
-    "user_id": "4444444",
+  "148632005": {
+    "telegram_id": "148632005",
+    "auth": "s9a4f7bd2-21c6-4f9c-b684-a44d6ee59d2e",
+    "user_id": "42351eb3e5913",
     "expiry": "2028-05-21 14:57:50",
-    "added_by": "ssh"
+    "added_by": "vanderlei"
   }
 }
