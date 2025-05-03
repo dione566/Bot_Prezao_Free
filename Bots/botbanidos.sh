@@ -1,5 +1,5 @@
 pkg upgrade
-sleep 4
+sleep 1
 echo "🅱🅾🆃 🅸🅽🅸🅲🅸🅰🅳🅾..."
 cd /sdcard/Download/Telegram/botbanidos
 python main.py
