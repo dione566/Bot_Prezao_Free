@@ -1,4 +1,3 @@
-pkg upgrade
 python --version
 echo "🅸🅽🅸🅲🅸🅰🅽🅳🅾 🅱🅾🆃..."
 cd /sdcard/Download/Telegram/botweb
