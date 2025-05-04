@@ -1,11 +1,15 @@
 CAMPANHAS
 
-Comandos Termux:
+Comandos Termux
 
 termux-setup-storage
+
 pip install requests telebot urllib3 aiohttp
+
 cd /sdcard/Download/Telegram/Script
+
 pip install -r requirements.txt
+
 python main.py
 
 cd /sdcard/Download/Telegram/botbanidos
