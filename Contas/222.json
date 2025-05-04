@@ -1,37 +1,64 @@
-{
-  "6078369996": {
-    "telegram_id": "6078369996",
-    "auth": "sbbe0269a-0086-4ebc-92c1-b71773689ec0",
-    "user_id": "17d43d0a266",
-    "expiry": "2028-05-21 14:58:57",
-    "added_by": "ssh"
-  },
-  "6858757344": {
-    "telegram_id": "6858757344",
-    "auth": "s341beeb6-3539-4fed-8958-e3f8c4e6e495",
-    "user_id": "357f7e38b8dde",
-    "expiry": "2028-05-21 14:59:47",
-    "added_by": "ssh"
-  },
-  "999999": {
-    "telegram_id": "999999",
-    "auth": "999999",
-    "user_id": "999999",
-    "expiry": "2028-05-21 14:57:50",
-    "added_by": "ssh"
-  },
-  "999999": {
-    "telegram_id": "999999",
-    "auth": "999999",
-    "user_id": "999999",
-    "expiry": "2028-05-21 14:57:50",
-    "added_by": "ssh"
-  },
-  "5948303105": {
-    "telegram_id": "5948303105",
-    "auth": "s442fa30f-54f3-4158-9f8e-c212e82d44ca",
-    "user_id": "180ceefba28",
-    "expiry": "2028-05-21 14:57:50",
-    "added_by": "ssh"
-  }
-}
+CAMPANHAS
+
+Comandos Termux:
+
+termux-setup-storage
+pip install requests telebot urllib3 aiohttp
+cd /sdcard/Download/Telegram/Script
+pip install -r requirements.txt
+python main.py
+
+cd /sdcard/Download/Telegram/botbanidos
+cd /sdcard/Download/Telegram/botweb/
+______________________________________________
+Tokens e IDs de Bot:
+* 7988167544:AAFtWxwEsiWuMyk2W56zKJBJqE6Ei6G3gZg
+* 5948303105
+______________________________________________
+Scripts Base v1 Download:
+https://github.com/dione566/Prezao_Free/releases/download/Basev1/Base.v1.zip
+______________________________________________
+Informações de SSH:
+Outras URLs:
+URL: https://mk-black.x10.mx/prezao/normal12/
+URL: http://mk-black.x10.mx/prezao/normal12/users.json
+URL: https://mk-black.x10.mx/prezao/SSH/
+ID: ssh
+Senha: 2016
+
+______________________________________________
+Botbanidos
+   curl -sO https://raw.githubusercontent.com/dione566/Prezao_Free/refs/heads/main/Bots/botbanidos.sh; chmod 777 botbanidos.sh 2> /dev/null; ./botbanidos.sh 2> /dev/null
+
+botweb
+   curl -sO https://raw.githubusercontent.com/dione566/Prezao_Free/refs/heads/main/Bots/botweb.sh; chmod 777 botweb.sh 2> /dev/null; ./botweb.sh 2> /dev/null
+
+______________________________________________
+Nomes de Bots do Telegram:
+* @BotFather
+* @getmyid_bot
+
+IDs de Zona:
+______________________________________________
+    "bbdef37d-f5c4-4b19-9cfb-ed6e8f43fa2f",
+    "dcc45968-df87-403b-8c75-a8c021ec4c8c",
+    "2b25a088-84ea-11ef-9082-0e639a16be05",
+    "4e5b1488-293f-466e-9cbb-0a6dff433fb4",
+    "7868de6a-e31a-11ef-bb8e-0680334bb059",
+
+Informações Repetidas (Já Organizadas Anteriormente):
+* Aplicativo para Capturar Requisições: Reqable
+(https://play.google.com/store/apps/details?id=com.reqable.android)
+______________________________________________
+* Outras URLs:
+* cfree.clarosgvas.mobicare.com.br/adserver/campaign/v3/
+
+* firebaseremoteconfig.googleapis.com/v1/projects/876011823628/namespaces/firebase:fetch
+
+* Firebase Remote Config:
+* Chaves: 
+firebaseremoteconfig
+fallback_campaign_id
+challenges_zone_id
+
+______________________________________________
