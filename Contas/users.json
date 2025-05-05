@@ -1,107 +1,69 @@
-{
-  "7699096998": {
-    "telegram_id": "7699096998",
-    "auth": "s36033b13-c1bf-42f2-8e1c-b21bd891606b",
-    "user_id": "180ceefba28",
-    "expiry": "2028-05-21 14:57:50",
-    "added_by": "Dione"
-},
-  "8140451174": {
-    "telegram_id": "8140451174",
-    "auth": "sa8276e76-cfeb-4875-8ee1-54ce166d2ef6",
-    "user_id": "70afcda66203d",
-    "expiry": "2028-05-21 14:57:50",
-    "added_by": "Tania"
-},
-  "5254549274": {
-    "telegram_id": "5254549274",
-    "auth": "s6cdd09c6-4aa6-4847-9d38-0f5578f37cf7",
-    "user_id": "18845e5dc08",
-    "expiry": "2025-06-02 14:57:50",
-    "added_by": "junior"
-},
-  "000000": {
-    "telegram_id": "000000",
-    "auth": "s173e7ad6-f541-4375-b690-af314b08be01",
-    "user_id": "52e1328ed987c",
-    "expiry": "2028-05-21 14:57:50",
-    "added_by": "ssh"
-},
-  "0000000": {
-    "telegram_id": "0000000",
-    "auth": "00000000",
-    "user_id": "0000000",
-    "expiry": "2028-05-21 14:57:50",
-    "added_by": "ssh"
-},
-  "0000000": {
-    "telegram_id": "0000000",
-    "auth": "00000000",
-    "user_id": "0000000",
-    "expiry": "2028-05-21 14:57:50",
-    "added_by": "ssh"
-},
-  "0000000": {
-    "telegram_id": "0000000",
-    "auth": "00000000",
-    "user_id": "0000000",
-    "expiry": "2028-05-21 14:57:50",
-    "added_by": "ssh"
-},
-  "0000000": {
-    "telegram_id": "0000000",
-    "auth": "00000000",
-    "user_id": "0000000",
-    "expiry": "2028-05-21 14:57:50",
-    "added_by": "ssh"
-},
-  "0000000": {
-    "telegram_id": "0000000",
-    "auth": "00000000",
-    "user_id": "0000000",
-    "expiry": "2028-05-21 14:57:50",
-    "added_by": "ssh"
-},
-  "0000000": {
-    "telegram_id": "0000000",
-    "auth": "00000000",
-    "user_id": "0000000",
-    "expiry": "2028-05-21 14:57:50",
-    "added_by": "ssh"
-},
-  "0000000": {
-    "telegram_id": "0000000",
-    "auth": "00000000",
-    "user_id": "0000000",
-    "expiry": "2028-05-21 14:57:50",
-    "added_by": "ssh"
-},
-  "0000000": {
-    "telegram_id": "0000000",
-    "auth": "00000000",
-    "user_id": "0000000",
-    "expiry": "2028-05-21 14:57:50",
-    "added_by": "ssh"
-},
-  "0000000": {
-    "telegram_id": "0000000",
-    "auth": "00000000",
-    "user_id": "0000000",
-    "expiry": "2028-05-21 14:57:50",
-    "added_by": "ssh"
-},
-  "0000000": {
-    "telegram_id": "0000000",
-    "auth": "00000000",
-    "user_id": "0000000",
-    "expiry": "2028-05-21 14:57:50",
-    "added_by": "ssh"
-},
-  "0000000": {
-    "telegram_id": "0000000",
-    "auth": "00000000",
-    "user_id": "0000000",
-    "expiry": "2028-05-21 14:57:50",
-    "added_by": "ssh"
-  }
-}
+CAMPANHAS V1 
+
+1. Configuração Inicial (Termux):
+
+● Preparação do Ambiente:
+termux-setup-storage
+pip install requests telebot urllib3 aiohttp
+
+● Navegação para Pastas de Scripts:
+cd /sdcard/Download/Telegram/botbanidos
+cd /sdcard/Download/Telegram/botweb/
+pip install -r requirements.txt
+
+● Execução do Script Principal (Pasta Script):
+python main.py
+
+● 2. Tokens e IDs de Bots:
+
+ID: 5948303105
+BOT WEB: 8114488512:AAHhByhvSe5iFjEg0eHhAsPEbAE4O5LcHho
+BOT BANIDO: 7657325142:AAFX7Dq-2lDjvsXFAkzQVYX5oJzavD-7uhU
+
+● 3. Download de Scripts Base:
+https://github.com/dione566/Prezao_Free/releases/download/Basev1/Base.v1.zip
+
+● 4. Informações de SSH:
+URL: https://mk-black.x10.mx/prezao/SSH/
+ID: ssh
+Senha: 2016
+
+● 5. URLs Adicionais:
+https://mk-black.x10.mx/prezao/normal12/
+http://mk-black.x10.mx/prezao/normal12/users.json
+cfree.clarosgvas.mobicare.com.br/adserver/campaign/v3/
+firebaseremoteconfig.googleapis.com/v1/projects/876011823628/namespaces/firebase:fetch
+
+● 6. Scripts de Bots (Download e Execução):
+Bot Banidos:
+curl -sO https://raw.githubusercontent.com/dione566/Prezao_Free/refs/heads/main/Bots/botbanidos.sh
+chmod 777 botbanidos.sh
+./botbanidos.sh
+
+Bot Web:
+curl -sO https://raw.githubusercontent.com/dione566/Prezao_Free/refs/heads/main/Bots/botweb.sh
+chmod 777 botweb.sh
+./botweb.sh
+
+● 7. Nomes de Bots do Telegram:
+@BotFather
+@getmyid_bot
+
+● 8. IDs de Zona:
+
+    "bbdef37d-f5c4-4b19-9cfb-ed6e8f43fa2f",
+    "dcc45968-df87-403b-8c75-a8c021ec4c8c",
+    "2b25a088-84ea-11ef-9082-0e639a16be05",
+    "4e5b1488-293f-466e-9cbb-0a6dff433fb4",
+    "7868de6a-e31a-11ef-bb8e-0680334bb059",
+
+● 9. Firebase Remote Config:
+firebaseremoteconfig
+fallback_campaign_id
+challenges_zone_id
+
+● 10. Aplicativo para Capturar Requisições:
+Nome: Reqable
+Link: https://play.google.com/store/apps/details?id=com.reqable.android
+
+
