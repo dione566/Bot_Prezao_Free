@@ -4,6 +4,7 @@ CAMPANHAS V1
 
 ● Preparação do Ambiente:
 termux-setup-storage
+pkg install python-pip
 pip install requests telebot urllib3 aiohttp
 
 ● Navegação para Pastas de Scripts:
