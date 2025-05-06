@@ -2,13 +2,18 @@ CAMPANHAS V1
 
 1. Configuração Inicial (Termux):
 
-● Preparação do Ambiente:
+● Preparação do Ambiente
+:
 termux-setup-storage
+
 pkg install python-pip
+
 pip install requests telebot urllib3 aiohttp
 
 ● Navegação para Pastas de Scripts:
+
 cd /sdcard/Download/Telegram/botbanidos
+
 cd /sdcard/Download/Telegram/botweb/
 pip install -r requirements.txt
 
@@ -37,6 +42,7 @@ firebaseremoteconfig.googleapis.com/v1/projects/876011823628/namespaces/firebase
 
 ● 6. Scripts de Bots (Download e Execução):
 Bot Banidos:
+
 curl -sO https://raw.githubusercontent.com/dione566/Prezao_Free/refs/heads/main/Bots/botbanidos.sh
 chmod 777 botbanidos.sh
 ./botbanidos.sh
@@ -46,7 +52,9 @@ curl -sO https://raw.githubusercontent.com/dione566/Prezao_Free/refs/heads/main/
 chmod 777 botweb.sh
 ./botweb.sh
 
-● 7. Nomes de Bots do Telegram:
+● 7. Nomes de Bots do 
+
+Telegram:
 @BotFather
 @getmyid_bot
 
@@ -59,12 +67,24 @@ chmod 777 botweb.sh
     "7868de6a-e31a-11ef-bb8e-0680334bb059",
 
 ● 9. Firebase Remote Config:
+
 firebaseremoteconfig
 fallback_campaign_id
 challenges_zone_id
 
-● 10. Aplicativo para Capturar Requisições:
+● 10. Aplicativo para Capturar 
+
+Requisições:
 Nome: Reqable
+
 Link: https://play.google.com/store/apps/details?id=com.reqable.android
+
+
+* cfree.clarosgvas.mobicare.com.br/adserver/campaign/v3/
+
+   * firebaseremoteconfig.googleapis.com/v1/projects/876011823628/namespaces/firebase:fetch
+
+   * http://mk-black.x10.mx/prezao/normal12/users.json
+
 
 
