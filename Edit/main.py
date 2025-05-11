@@ -106,7 +106,7 @@ def start(message):
             KeyboardButton("Resgatar 🌐"),
             KeyboardButton("Moedas 💰")
         )
-        welcome_msg = "Use /start Menu Principal\n\n Boas-vindas ao bot Prezao Hack! 😊"
+        welcome_msg = "Boas-vindas ao bot Prezao Hack! 😊"
         bot.reply_to(message, welcome_msg, reply_markup=markup)
     else:
         bot.reply_to(message, "🚫 Por favor, solicite ao administrador (@Soueuman) que realize uma reconexão para este bot.")
