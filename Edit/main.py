@@ -220,7 +220,7 @@ def check_campaigns(message):
     finally:
         session.close()
 
-@bot.message_handler(commands=['refazer'])
+@bot.message_handler(commands=[''])
 @verify_login
 def refazer_campaigns(message):
     user_id = str(message.from_user.id)
