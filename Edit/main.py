@@ -213,7 +213,7 @@ def check_campaigns(message):
             
         campaign_data_by_user[user_id] = campaign_data
         last_campaigns[user_id] = campaign_data.copy()
-        bot.reply_to(message, "✅ Tudo certo! Use /iniciar para começar ou /refazer para repetir.")
+        bot.reply_to(message, "✅ Tudo certo! Use /iniciar para começar")
         
     except Exception as e:
         bot.reply_to(message, f"⚠️ Erro: verificação de campanhas falhou: {str(e)}")
@@ -228,7 +228,7 @@ def refazer_campaigns(message):
         bot.reply_to(message, "⚠️ Você não está autorizado.")
         return
     if user_id not in last_campaigns or not last_campaigns[user_id]:
-        bot.reply_to(message, "Não há campanhas anteriores para refazer. Use /verificar para buscar novas campanhas.")
+        bot.reply_to(message, "Use /verificar para buscar novas campanhas.")
         return
     campaign_data_by_user[user_id] = last_campaigns[user_id].copy()
     bot.reply_to(message, "✅ Campanhas anteriores carregadas! Iniciando execução...")
