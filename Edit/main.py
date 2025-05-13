@@ -106,7 +106,7 @@ def start(message):
             KeyboardButton("Resgatar 🌐"),
             KeyboardButton("Moedas 💰")
         )
-        welcome_msg = "    ✅🛡️ V2.0 ANTI-BAN 🛡️ V2.0 ANTI-BAN ✅\n Verificar 🔎 \n /verificar \n\n Iniciar ✅ \n /iniciar \n\n Moedas 💰 \n /moedas \n\n Abrir Menu 📱 \n /start \n\n Boas-vindas ao bot Prezao Hack! 😊"
+        welcome_msg = "🏆 V2.0 ANTI-BAN 🏆 \n\n Verificar 🔎 \n /verificar \n\n Iniciar ✅ \n /iniciar \n\n Moedas 💰 \n /moedas \n\n Abrir Menu 📱 \n /start \n\n Boas-vindas ao bot Prezao Hack! 😊"
         bot.reply_to(message, welcome_msg, reply_markup=markup)
     else:
         bot.reply_to(message, "🚫 Por favor, solicite ao administrador (@Soueuman) que realize uma reconexão para este bot.")
