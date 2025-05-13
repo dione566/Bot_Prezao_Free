@@ -297,7 +297,6 @@ def start_campaigns(message):
                         f"⏳ [{progress_bar}] {progress}%\n\n"
                         f"📢 Anúncios: {completed_media}/{total_media}\n\n"
                         f"🎬 Assistindo... {total_media} Anúncios"
-                        f"💰 MOEDAS: {wallet_info['saldo']:.0f}"
                     )
 
                     try:
@@ -336,7 +335,6 @@ def start_campaigns(message):
                 f"✅ Todas as campanhas foram concluídas.\n\n"
                 f"🎬 Total de vídeos: {total_media}\n"
                 f"⏳ Tempo estimado: {(total_media * 5) // 15} segundos\n\n"
-                f"💰 MOEDAS: {wallet_info['saldo']:.0f}\n"
                 f"Use /verificar para buscar novas campanhas"
             )
             bot.edit_message_text(final_text, message.chat.id, status_message.message_id)
