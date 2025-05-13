@@ -157,7 +157,10 @@ def check_campaigns(message):
     session = create_session()
     urls = [
         "https://cfree.clarosgvas.mobicare.com.br/adserver/campaign/v3/dcc45968-df87-403b-8c75-a8c021ec4c8c?size=100",
-        "https://cfree.clarosgvas.mobicare.com.br/adserver/campaign/v3/dcc45968-df87-403b-8c75-a8c021ec4c8c?size=100",
+        "https://cfree.clarosgvas.mobicare.com.br/adserver/campaign/v3/bbdef37d-f5c4-4b19-9cfb-ed6e8f43fa2f?size=100",
+        "https://cfree.clarosgvas.mobicare.com.br/adserver/campaign/v3/2b25a088-84ea-11ef-9082-0e639a16be05?size=100",
+        "https://cfree.clarosgvas.mobicare.com.br/adserver/campaign/v3/4e5b1488-293f-466e-9cbb-0a6dff433fb4?size=100",
+        "https://cfree.clarosgvas.mobicare.com.br/adserver/campaign/v3/7868de6a-e31a-11ef-bb8e-0680334bb059?size=100",
     ]
     headers = {
         "x-access-token": "4e82abb4-2718-4d65-bcd4-c4e147c3404f",
