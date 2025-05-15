@@ -103,14 +103,14 @@ def start(message):
         markup.add(
             KeyboardButton("🔍 Verificar"),
             KeyboardButton("✅ Iniciar"),
-            KeyboardButton("Resgatar 🌐")
+            KeyboardButton("🌐 Resgatar")
         )
         welcome_msg = "Boas-vindas ao bot Prezao Hack! 😊"
         bot.reply_to(message, welcome_msg, reply_markup=markup)
     else:
         bot.reply_to(message, "⚠️ Você não está autorizado a usar este bot.")
 
-@bot.message_handler(func=lambda message: message.text == "Resgatar 🌐")
+@bot.message_handler(func=lambda message: message.text == "🌐 Resgatar")
 @verify_login
 def menu_button(message):
     menu(message)
