@@ -383,16 +383,16 @@ def menu(message):
             msg += f"Internet Usada: {credits_info['usado']}\n"
             msg += f"Internet Disponível: {credits_info['disponivel']}\n\n"
         msg += f"💰 Moedas: {wallet_info['saldo']:.0f}\n\n"
-        msg += "███▓▒░ RESGATAR ░▒▓███\n"
+        msg += "███▓▒░ RESGATAR ░▒▓███\nhttps://prezaofree.com.br/redeem-prizes\nhttps://prezaofree.com.br/redeem-prizes\nhttps://prezaofree.com.br/redeem-prizes\n"
         markup = ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
         buttons = []
         for package in data['packages']:
             mb_amount = package['description'].split(' ')[1].split(' MB')[0]
             package_text = f"{mb_amount}MB - R$ {package['total']:.0f}"
-            msg += f"\n{package['name']}\n"
-            msg += f"{package['description']}\n"
-            msg += f"{package['total']:.0f} MOEDAS 💰\n"
-            buttons.append(KeyboardButton(f"📦 {mb_amount}MB"))
+            #msg += f"\n{package['name']}\n"
+            #msg += f"{package['description']}\n"
+            #msg += f"{package['total']:.0f} MOEDAS 💰\n"
+            #buttons.append(KeyboardButton(f"📦 {mb_amount}MB"))
         buttons.append(KeyboardButton("/start"))
         markup.add(*buttons)
         sent_message = bot.reply_to(message, msg, reply_markup=markup)
