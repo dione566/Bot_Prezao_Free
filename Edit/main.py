@@ -12,7 +12,7 @@ from urllib3.util.retry import Retry
 from datetime import datetime, timedelta
 
 state_storage = StateMemoryStorage()
-bot = telebot.TeleBot("7657325142:AAFX7Dq-2lDjvsXFAkzQVYX5oJzavD-7uhU", state_storage=state_storage)
+bot = telebot.TeleBot("7676132387:AAHtuR59h_UlhCwgjaVVIOQ0Zi8GtTyKMgY", state_storage=state_storage)
 
 users_data = {}
 campaign_data_by_user = {}
@@ -103,14 +103,14 @@ def start(message):
         markup.add(
             KeyboardButton("🔍 Verificar"),
             KeyboardButton("✅ Iniciar"),
-            KeyboardButton("🌐 Resgatar")
+            KeyboardButton("💰 Saldo")
         )
-        welcome_msg = "Boas-vindas ao bot Prezao Hack! 😊"
+        welcome_msg = "Boas-vindas ao bot Prezao Hack! 😊 \n\n📱 Menu Simples porem eficiente\n\n💰 Resgate Moedas sem esforços\n\n🙅 Resgate pelo link para evitar Bugs\n\n███▓▒░ RESGATAR ░▒▓███\nhttps://prezaofree.com.br/auth/splash\nhttps://prezaofree.com.br/auth/splash\nhttps://prezaofree.com.br/auth/splash\n\nDetalhes da versão 2.0\n\n✅ Bypass Anti Ban\n✅ Bypass em IDs\n✅ IP Rotate\n✅ Login Seguro"
         bot.reply_to(message, welcome_msg, reply_markup=markup)
     else:
         bot.reply_to(message, "⚠️ Você não está autorizado a usar este bot.")
 
-@bot.message_handler(func=lambda message: message.text == "🌐 Resgatar")
+@bot.message_handler(func=lambda message: message.text == "💰 Saldo")
 @verify_login
 def menu_button(message):
     menu(message)
@@ -383,7 +383,7 @@ def menu(message):
             msg += f"Internet Usada: {credits_info['usado']}\n"
             msg += f"Internet Disponível: {credits_info['disponivel']}\n\n"
         msg += f"💰 Moedas: {wallet_info['saldo']:.0f}\n\n"
-        msg += "███▓▒░ RESGATAR ░▒▓███\nhttps://prezaofree.com.br/redeem-prizes\nhttps://prezaofree.com.br/redeem-prizes\nhttps://prezaofree.com.br/redeem-prizes\n"
+        msg += ""
         markup = ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
         buttons = []
         for package in data['packages']:
