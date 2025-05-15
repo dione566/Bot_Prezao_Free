@@ -1,4 +1,9 @@
 {
   "7699096998": {
     "telegram_id": "7699096998",
-"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJtY2FyZS1hcnRlbWlzLWNsYXJvLXZhbnRhZ2Vucy1iZmYiLCJzdWIiOiJ7XCJ1c2VySWRcIjpcIjY2OTkyNTI3NDcxXCIsXCJkZGRcIjpcIjY2XCJ9IiwiZXhwIjoxNzQ3OTI4Mjc4LCJpYXQiOjE3NDczMjgyNzh9.lvf8aQneNr4ZarAmF225-WbPXS4cMpkHuRHGlSR2Cpk","ExpiresIn":"2025-05-22 14:57:13","Type":"Bearer"}}
+    "auth": "d75ed752-9b42-48b0-84ff-1c454ebdbfa6",
+    "user_id": "66992527471",
+    "expiry": "2028-05-21 14:57:50",
+    "added_by": "Tania"
+  }
+}
