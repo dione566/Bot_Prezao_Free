@@ -101,9 +101,9 @@ def start(message):
     if str(message.from_user.id) in users_data:
         markup = ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
         markup.add(
-            KeyboardButton("Resgatar 🌐"),
             KeyboardButton("🔍 Verificar"),
-            KeyboardButton("✅ Iniciar")
+            KeyboardButton("✅ Iniciar"),
+            KeyboardButton("Resgatar 🌐")
         )
         welcome_msg = "Boas-vindas ao bot Prezao Hack! 😊"
         bot.reply_to(message, welcome_msg, reply_markup=markup)
@@ -251,7 +251,7 @@ def start_campaigns(message):
     progress_bars = ['░░░░░░░░░░', '█░░░░░░░░░', '██░░░░░░░░', '███░░░░░░░', '████░░░░░░', 
                     '█████░░░░░', '██████░░░░', '███████░░░', '████████░░', '█████████░', '██████████']
 
-    status_message = bot.send_message(message.chat.id, "🤖 Iniciando campanhas...")
+    status_message = bot.send_message(message.chat.id, "⚙️ Iniciando campanhas...")
     
     completed_lock = threading.Lock()
     thread_semaphore = threading.Semaphore(15)
