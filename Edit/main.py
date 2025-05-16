@@ -12,7 +12,7 @@ from urllib3.util.retry import Retry
 from datetime import datetime, timedelta
 
 state_storage = StateMemoryStorage()
-bot = telebot.TeleBot("7676132387:AAHtuR59h_UlhCwgjaVVIOQ0Zi8GtTyKMgY", state_storage=state_storage)
+bot = telebot.TeleBot("7657325142:AAFX7Dq-2lDjvsXFAkzQVYX5oJzavD-7uhU", state_storage=state_storage)
 
 users_data = {}
 campaign_data_by_user = {}
