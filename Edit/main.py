@@ -73,10 +73,10 @@ def verify_login(func):
     def wrapper(message, *args, **kwargs):
         user_id = str(message.from_user.id)
         if user_id not in users_data:
-            bot.reply_to(message, "⚠️ Você não está autorizado.")
+            bot.reply_to(message, "Você não está autorizado.")
             return
         if not check_user_expiry(user_id):
-            bot.reply_to(message, "❌ Seu acesso expirou. Contate um administrador.")
+            bot.reply_to(message, "Acesso expirou. Procure o administrador. ⚠️")
             return
         headers = {
             'X-AUTHORIZATION': users_data[user_id]["auth"],
@@ -101,21 +101,22 @@ def start(message):
     if str(message.from_user.id) in users_data:
         markup = ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
         markup.add(
-            KeyboardButton("🔍 Verificar"),
+            KeyboardButton("🔎 Verificar"),
             KeyboardButton("✅ Iniciar"),
+            KeyboardButton("🌐 Resgatar"),
             KeyboardButton("💰 Saldo")
         )
-        welcome_msg = "Boas-vindas ao bot Prezao Hack! 😊 \n\n📱 Menu Simples porem eficiente\n\n💰 Resgate Moedas sem esforços\n\n🙅 Resgate pelo link para evitar Bugs\n\n███▓▒░ RESGATAR ░▒▓███\nhttps://prezaofree.com.br/auth/splash\nhttps://prezaofree.com.br/auth/splash\nhttps://prezaofree.com.br/auth/splash\n\nDetalhes da versão 2.0\n\n✅ Bypass Anti Ban\n✅ Bypass em IDs\n✅ IP Rotate\n✅ Login Seguro"
+        welcome_msg = " Verificar 🔎      Iniciar ✅\n/verificar          /iniciar\n\n Resgate pelo link para evitar Bugs 🙅\n\n███▓▒░ RESGATAR ░▒▓███\nhttps://prezaofree.com.br/auth/splash\nhttps://prezaofree.com.br/auth/splash\n\n ATUALIZAR BOT 📱 \n /start    /start    /start \n\n Detalhes da versão 2.0\n\n✅ BYPASS ANTI BAN\n✅ BYPASS IDs\n✅ IP ROTATE \n\n Resgate Moedas sem esforços 💰\n Boas-vindas ao bot Prezao Hack! 😊"
         bot.reply_to(message, welcome_msg, reply_markup=markup)
     else:
-        bot.reply_to(message, "⚠️ Você não está autorizado a usar este bot.")
+        bot.reply_to(message, "🚫 Por favor, solicite ao administrador (@Soueuman) que realize uma reconexão para este bot.")
 
-@bot.message_handler(func=lambda message: message.text == "💰 Saldo")
+@bot.message_handler(func=lambda message: message.text == "🌐 Resgatar")
 @verify_login
 def menu_button(message):
     menu(message)
 
-@bot.message_handler(func=lambda message: message.text == "🔍 Verificar")
+@bot.message_handler(func=lambda message: message.text == "🔎 Verificar")
 @verify_login
 def verify_button(message):
     check_campaigns(message)
@@ -124,8 +125,13 @@ def verify_button(message):
 @verify_login
 def start_button(message):
     start_campaigns(message)
+    
+@bot.message_handler(func=lambda message: message.text == "💰 Saldo")
+@verify_login
+def moedas_button(message):
+    moedas(message)
 
-@bot.message_handler(func=lambda message: message.text == "⏹ Stop")
+@bot.message_handler(func=lambda message: message.text == "🌐 Resgatar")
 @verify_login
 def stop_button(message):
     stop_campaigns(message)
@@ -138,7 +144,7 @@ def stop_campaigns(message):
         active_tasks[user_id] = False
         if user_id in campaign_data_by_user:
             del campaign_data_by_user[user_id]
-        bot.reply_to(message, "⚠️ CAMPANHAS PARADAS USE curl -sO https://raw.githubusercontent.com/dione566/Prezao_Free/refs/heads/main/Bots/botbanidos.sh; chmod 777 botbanidos.sh 2> /dev/null; ./botbanidos.sh 2> /dev/nullificar ANTES DE INICIAR NOVAMENTE ⚠️")
+        bot.reply_to(message, "🚫 CAMPANHAS PARADAS. Obrigatório usar /verificar ANTES de iniciar.️")
 
 @bot.message_handler(commands=['verificar'])
 @verify_login
@@ -210,10 +216,10 @@ def check_campaigns(message):
             
         campaign_data_by_user[user_id] = campaign_data
         last_campaigns[user_id] = campaign_data.copy()
-        bot.reply_to(message, "✅ Campanhas verificadas! Use /iniciar para começar.")
+        bot.reply_to(message, "✅ Tudo certo! Use /iniciar para começar")
         
     except Exception as e:
-        bot.reply_to(message, f"❌ Erro ao verificar campanhas: {str(e)}")
+        bot.reply_to(message, f"⚠️ Erro: verificação de campanhas falhou: {str(e)}")
     finally:
         session.close()
 
@@ -225,7 +231,7 @@ def refazer_campaigns(message):
         bot.reply_to(message, "⚠️ Você não está autorizado.")
         return
     if user_id not in last_campaigns or not last_campaigns[user_id]:
-        bot.reply_to(message, "⚠️ Não há campanhas anteriores para refazer. Use /verificar para buscar novas campanhas.")
+        bot.reply_to(message, "Use /verificar para buscar novas campanhas.")
         return
     campaign_data_by_user[user_id] = last_campaigns[user_id].copy()
     bot.reply_to(message, "✅ Campanhas anteriores carregadas! Iniciando execução...")
@@ -240,7 +246,7 @@ def start_campaigns(message):
         bot.reply_to(message, "⚠️ Você não está autorizado.")
         return
     if user_id not in campaign_data_by_user:
-        bot.reply_to(message, "⚠️ Não há campanhas disponíveis. Use /verificar para buscar novas campanhas.")
+        bot.reply_to(message, "🚫 Nenhuma campanha disponível. Por favor, use /verificar para buscar.")
         return
 
     active_tasks[user_id] = True
@@ -251,7 +257,7 @@ def start_campaigns(message):
     progress_bars = ['░░░░░░░░░░', '█░░░░░░░░░', '██░░░░░░░░', '███░░░░░░░', '████░░░░░░', 
                     '█████░░░░░', '██████░░░░', '███████░░░', '████████░░', '█████████░', '██████████']
 
-    status_message = bot.send_message(message.chat.id, "⚙️ Iniciando campanhas...")
+    status_message = bot.send_message(message.chat.id, "⏳ Iniciando campanhas...")
     
     completed_lock = threading.Lock()
     thread_semaphore = threading.Semaphore(15)
@@ -329,9 +335,9 @@ def start_campaigns(message):
 
         if active_tasks.get(user_id, False) and not stop_event.is_set():
             final_text = (
-                f"✅ CAMPANHAS CONCLUÍDAS\n\n"
-                f"📺 Total de vídeos: {total_media}\n"
-                f"⏱ Tempo aproximado: {(total_media * 5) // 15} segundos\n\n"
+                f"✅ Todas as campanhas foram concluídas.\n\n"
+                f"🎬 Total de vídeos: {total_media}\n"
+                f"⏳ Tempo estimado: {(total_media * 5) // 15} segundos\n\n"
                 f"Use /verificar para buscar novas campanhas"
             )
             bot.edit_message_text(final_text, message.chat.id, status_message.message_id)
@@ -339,7 +345,7 @@ def start_campaigns(message):
 
     except Exception as e:
         stop_event.set()
-        bot.edit_message_text(f"❌ Erro durante a execução: {str(e)}", message.chat.id, status_message.message_id)
+        bot.edit_message_text(f"⚠️ Erro durante a execução: {str(e)}", message.chat.id, status_message.message_id)
     finally:
         active_tasks[user_id] = False
 
@@ -378,31 +384,31 @@ def menu(message):
         msg += f""
         msg += f""
         if credits_info:
-            msg += ""
-            msg += f"Internet Total: {credits_info['total']}\n"
-            msg += f"Internet Usada: {credits_info['usado']}\n"
-            msg += f"Internet Disponível: {credits_info['disponivel']}\n\n"
-        msg += f"💰 Moedas: {wallet_info['saldo']:.0f}\n\n"
-        msg += ""
+            #msg += "███▓▒░ MINHA INFO ░▒▓███\n\n"
+            #msg += f"Internet Total: {credits_info['total']}\n"
+            #msg += f"Internet Usada: {credits_info['usado']}\n"
+            msg += f""
+        msg += "███▓▒░ RESGATAR ░▒▓███\n"
+        msg += f"\n💰 MOEDAS: {wallet_info['saldo']:.0f}\n"
         markup = ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
         buttons = []
         for package in data['packages']:
-            mb_amount = package['description'].split(' ')[1].split(' MB')[0]
+            mb_amount = package['description'].split('Receba ')[1].split(' MB')[0]
             package_text = f"{mb_amount}MB - R$ {package['total']:.0f}"
-            #msg += f"\n{package['name']}\n"
-            #msg += f"{package['description']}\n"
-            #msg += f"{package['total']:.0f} MOEDAS 💰\n"
-            #buttons.append(KeyboardButton(f"📦 {mb_amount}MB"))
+            msg += f"\n{package['name']}\n"
+            msg += f"{package['description']}\n"
+            msg += f"{package['total']:.0f} MOEDAS 💰\n"
+            buttons.append(KeyboardButton(f"🌐 {mb_amount}MB"))
         buttons.append(KeyboardButton("/start"))
         markup.add(*buttons)
         sent_message = bot.reply_to(message, msg, reply_markup=markup)
         menu_messages[user_id] = sent_message
     except:
-        bot.reply_to(message, "❌ Erro ao carregar o menu. Tente novamente mais tarde.")
+        bot.reply_to(message, "⚠️ Erro ao carregar o menu. Tente novamente mais tarde.")
 
-@bot.message_handler(func=lambda message: message.text and message.text.startswith("📦"))
+@bot.message_handler(func=lambda message: message.text and message.text.startswith("🌐"))
 def handle_package_button(message):
-    mb_amount = message.text.split("📦 ")[1].split("MB")[0]
+    mb_amount = message.text.split("🌐 ")[1].split("MB")[0]
     user_id = str(message.from_user.id)
     headers = {
         'X-AUTHORIZATION': users_data[user_id]["auth"],
@@ -423,9 +429,9 @@ def handle_package_button(message):
                 message.text = f"/pacote_{package['id']}"
                 select_package_handler(message)
                 return
-        bot.reply_to(message, "❌ Pacote não encontrado.")
+        bot.reply_to(message, "⚠️ Pacote não encontrado.")
     except:
-        bot.reply_to(message, "❌ Erro ao processar o pacote.")
+        bot.reply_to(message, "⚠️ Erro ao processar o pacote.")
 
 @bot.message_handler(regexp="^/pacote_[0-9]+$")
 @verify_login
@@ -448,21 +454,135 @@ def select_package_handler(message):
         response = requests.post(url, headers=headers, json=data)
         response_code = response.json()["code"]
         if "ACCEPTED" in response_code:
-            bot.reply_to(message, "✅ Pacote resgatado com sucesso!")
+            bot.reply_to(message, "✅ Resgate do pacote concluído!")
             if user_id in menu_messages:
                 menu(message)
         elif "WITHDRAW_NOT_ALLOWED" in response_code:
-            bot.reply_to(message, "❌ Limite de resgates diários atingido.")
+            bot.reply_to(message, "🚫 Limite de resgates diários atingido.")
         else:
-            bot.reply_to(message, "❌ Erro ao resgatar o pacote.")
+            bot.reply_to(message, "⚠️ Erro ao resgatar o pacote.")
     except:
-        bot.reply_to(message, "❌ Erro ao processar o resgate.")
+        bot.reply_to(message, "⚠️ Erro ao processar o resgate.")
+
+@bot.message_handler(commands=['moedas'])
+@verify_login
+def moedas(message):
+    user_id = str(message.from_user.id)
+    headers = {
+        'X-AUTHORIZATION': users_data[user_id]["auth"],
+        'Content-Type': 'application/json',
+        'X-CHANNEL': 'ANDROID',
+        'X-APP-VERSION': '2.9.2.4',
+        'Host': 'cfree.clarosgvas.mobicare.com.br',
+        'Connection': 'Keep-Alive',
+        'Accept-Encoding': 'gzip',
+        'User-Agent': 'okhttp/4.12.0'
+    }
+    url = 'https://cfree.clarosgvas.mobicare.com.br/home'
+    try:
+        response = requests.get(url, headers=headers)
+        data = response.json()
+        wallet_info = {
+            'saldo': data['wallet']['balance'],
+            'disponivel_em': data['wallet']['availableIn']
+        }
+        credits_info = None
+        for credit in data['credits']:
+            if credit['type'] == 'DATA':
+                credits_info = {
+                    'total': format_data_size(f"{credit['total']} {credit['unit']}"),
+                    'usado': format_data_size(f"{credit['used']} {credit['unit']}"),
+                    'disponivel': format_data_size(f"{credit['usable']} {credit['unit']}")
+                }
+                break
+        msg = f""
+        msg += f""
+        msg += f""
+        if credits_info:
+            msg += "███▓▒░ MINHA INFO ░▒▓███\n\n"
+            msg += f"Internet Total: {credits_info['total']}\n"
+            msg += f"Internet Usada: {credits_info['usado']}\n"
+            msg += f"Internet Disponível: {credits_info['disponivel']}\n\n"
+        msg += f"💰 MOEDAS: {wallet_info['saldo']:.0f}\n"
+        markup = ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
+        buttons = []
+        for package in data['packages']:
+            mb_amount = package['description'].split('Receba ')[1].split(' MB')[0]
+            package_text = f"{mb_amount}MB - R$ {package['total']:.0f}"
+            #msg += f"\n{package['name']}\n"
+            #msg += f"{package['description']}\n"
+            #msg += f"{package['total']:.0f} MOEDAS 💰\n"
+            #buttons.append(KeyboardButton(f"🌐 {mb_amount}MB"))
+        buttons.append(KeyboardButton("/start"))
+        markup.add(*buttons)
+        sent_message = bot.reply_to(message, msg, reply_markup=markup)
+        menu_messages[user_id] = sent_message
+    except:
+        bot.reply_to(message, "⚠️ Erro ao carregar o menu. Tente novamente mais tarde.")
+
+@bot.message_handler(func=lambda message: message.text and message.text.startswith("🌐"))
+def handle_package_button(message):
+    mb_amount = message.text.split("🌐 ")[1].split("MB")[0]
+    user_id = str(message.from_user.id)
+    headers = {
+        'X-AUTHORIZATION': users_data[user_id]["auth"],
+        'Content-Type': 'application/json',
+        'X-CHANNEL': 'ANDROID',
+        'X-APP-VERSION': '2.9.2.4',
+        'Host': 'cfree.clarosgvas.mobicare.com.br',
+        'Connection': 'Keep-Alive',
+        'Accept-Encoding': 'gzip',
+        'User-Agent': 'okhttp/4.12.0'
+    }
+    url = 'https://cfree.clarosgvas.mobicare.com.br/home'
+    try:
+        response = requests.get(url, headers=headers)
+        data = response.json()
+        for package in data['packages']:
+            if mb_amount in package['description']:
+                message.text = f"/pacote_{package['id']}"
+                select_package_handler(message)
+                return
+        bot.reply_to(message, "⚠️ Pacote não encontrado.")
+    except:
+        bot.reply_to(message, "⚠️ Erro ao processar o pacote.")
+
+@bot.message_handler(regexp="^/pacote_[0-9]+$")
+@verify_login
+def select_package_handler(message):
+    user_id = str(message.from_user.id)
+    package_id = message.text.split('_')[1]
+    headers = {
+        'X-AUTHORIZATION': users_data[user_id]["auth"],
+        'X-CHANNEL': 'ANDROID',
+        'X-APP-VERSION': '2.9.2.4',
+        'Content-Type': 'application/json; charset=UTF-8',
+        'Host': 'cfree.clarosgvas.mobicare.com.br',
+        'Connection': 'Keep-Alive',
+        'Accept-Encoding': 'gzip',
+        'User-Agent': 'okhttp/4.12.0'
+    }
+    data = {"packageId": package_id}
+    url = 'https://cfree.clarosgvas.mobicare.com.br/package/withdraw'
+    try:
+        response = requests.post(url, headers=headers, json=data)
+        response_code = response.json()["code"]
+        if "ACCEPTED" in response_code:
+            bot.reply_to(message, "✅ Resgate do pacote concluído!")
+            if user_id in menu_messages:
+                menu(message)
+        elif "WITHDRAW_NOT_ALLOWED" in response_code:
+            bot.reply_to(message, "🚫 Limite de resgates diários atingido.")
+        else:
+            bot.reply_to(message, "⚠️ Erro ao resgatar o pacote.")
+    except:
+        bot.reply_to(message, "⚠️ Erro ao processar o resgate.")
 
 def refresh_users():
     global users_data
     while True:
         users_data = load_users()
-        time.sleep(300)
+        time.sleep(0)
 
 refresh_thread = threading.Thread(target=refresh_users, daemon=True)
 refresh_thread.start()
