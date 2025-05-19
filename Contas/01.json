@@ -1,6 +1,12 @@
 {
   "7699096998": {
     "telegram_id": "7699096998",
-    "auth":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJtY2FyZS1hcnRlbWlzLWNsYXJvLXZhbnRhZ2Vucy1iZmYiLCJzdWIiOiJ7XCJ1c2VySWRcIjpcIjY2OTkyNTI3NDcxXCIsXCJkZGRcIjpcIjY2XCJ9IiwiZXhwIjoxNzQ4MjgzNjYwLCJpYXQiOjE3NDc2ODM2NjB9.GVjnAXlKoT_ulvoyVB-rlPMHjs5iJ63Bm_rImHDBKjo","ExpiresIn":"2025-05-26 16:08:26","Type":"Bearer"
+    "status": true,
+    "message": "OK",
+    "errors": null,
+    "data": {
+        "AccessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJtY2FyZS1hcnRlbWlzLWNsYXJvLXZhbnRhZ2Vucy1iZmYiLCJzdWIiOiJ7XCJ1c2VySWRcIjpcIjY2OTkyNTI3NDcxXCIsXCJkZGRcIjpcIjY2XCJ9IiwiZXhwIjoxNzQ4MjgzNjYwLCJpYXQiOjE3NDc2ODM2NjB9.GVjnAXlKoT_ulvoyVB-rlPMHjs5iJ63Bm_rImHDBKjo",
+        "ExpiresIn": "2025-05-26 18:21:00",
+        "Type": "Bearer"
   }
 }
