@@ -1,9 +1,10 @@
 {
-  "7699096998": {
-    "telegram_id": "7699096998",
-    "auth": "sbd97b260-a5ab-48eb-8796-945d6a16c2a5",
-    "user_id": "5a17883c54b4e",
-    "expiry": "2028-05-21 14:57:50",
-    "added_by": "ssh"
-  }
+    "7699096998": {
+        "telegram_id": "66992386596",
+        "transaction_id": "ad5ad197-34a9-4d3d-bae4-449d01ab7358#4134980",
+        "authorization": "eyJhbGciOiJIUzI1NiJ9.eyJYLUNIQU5ORUwiOiJXRUIiLCJYLVRPS0VOLVZFUlNJT04iOiIxLjAuMCIsIlgtVVNFUi1JRCI6IjU1NjY5OTIzODY1OTYiLCJYLVdBTExFVC1JRCI6IjNjMmQyYThlOTVkNDkiLCJleHAiOjE3NTQ2NjgxMzksImlhdCI6MTc0Njg5MjEzOSwiaXNzIjoiVDdWaGoxcXp6bmh5R1RGdHViUHgzQlNwQW0xcjJtajgiLCJzdWIiOiI1NTY2OTkyMzg2NTk2In0.kJsz-Fnzt2I5yma4gf1PnGSVWx50SSqQBvcMQ3b3E5U",
+        "user_id": "3c2d2a8e95d49",
+        "expiry": "2028-05-21 14:57:50",
+         "added_by": "ssh"
+    }
 }
