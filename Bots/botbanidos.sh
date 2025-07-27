@@ -1,5 +1,5 @@
 python --version
 echo "BOT BANIDOS INICIADO"
-cd /sdcard/Download/Telegram/Bot
+cd /sdcard/Download/Bot/Bot
 python main.py
 clear
