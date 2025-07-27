@@ -1,5 +1,5 @@
 python --version
 echo "INICIANDO BOT WEB..."
-cd /sdcard/Download/Telegram/botweb
+cd /sdcard/Download/Bot/botweb
 python main.py
 clear
